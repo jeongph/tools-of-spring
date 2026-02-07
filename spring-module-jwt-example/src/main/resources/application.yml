@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+jwt:
+  secret: dGhpcy1pcy1hLXRlc3Qtc2VjcmV0LWtleS1mb3ItdG9vbHMtb2Ytc3ByaW5nLWp3dC1tb2R1bGUtZXhhbXBsZQ==
+  access-token-validity-ms: 1800000
+  refresh-token-validity-ms: 604800000
