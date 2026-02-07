@@ -2,12 +2,18 @@
 
 > Spring 개발 시 가져다 쓸 유용한 코드, 설계, 모듈
 
-## 모듈 구조
+## 프로젝트 구조
 
-| 모듈 | 설명 | 타입 |
-|------|------|------|
-| `spring-module-jwt` | JWT 인증 라이브러리 (Spring Boot Starter 패턴) | 라이브러리 (plain JAR) |
-| `spring-module-jwt-example` | JWT 모듈 사용 예제 애플리케이션 | 애플리케이션 (bootJar) |
+```
+tools-of-spring/
+├── src/                    (예제 애플리케이션 - Spring Boot)
+│   └── .../example/
+└── spring-module-jwt/      (JWT 인증 라이브러리 - plain JAR)
+    └── .../jwt/
+```
+
+- 루트 프로젝트가 예제 애플리케이션 역할을 겸한다 (H2 + JPA)
+- 서브모듈은 독립 라이브러리로, 다른 프로젝트에서 의존성으로 가져다 쓸 수 있다
 
 ## 모듈 네이밍 컨벤션
 
